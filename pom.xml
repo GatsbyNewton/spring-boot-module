@@ -105,9 +105,18 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
+<!--          spring-boot-maven-plugin打包出来的jar是不可依赖的，指定一个属性classifier，这个属性为可执行jar包的名字后缀。-->
+<!--          http://www.manongjc.com/article/27032.html-->
           <configuration>
             <classifier>exec</classifier>
           </configuration>
+<!--          <executions>-->
+<!--            <execution>-->
+<!--              <goals>-->
+<!--                <goal>repackage</goal>-->
+<!--              </goals>-->
+<!--            </execution>-->
+<!--          </executions>-->
         </plugin>
 
         <plugin>
